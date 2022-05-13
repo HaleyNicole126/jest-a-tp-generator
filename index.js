@@ -207,8 +207,8 @@ const promptIntern = () => {
             type: 'input',
             name: 'school',
             message: 'Intern school: (Required)',
-            validate: officeNumber => {
-                if (officeNumber) {
+            validate: school => {
+                if (school) {
                     return true;
                 } else {
                     console.log('Please enter a school!');
@@ -218,8 +218,8 @@ const promptIntern = () => {
         },
     ]).then(answers => {
         console.log(answers);
-        const manager = new Manager(answers.name, answers.id, answers.email, answers.officeNumber);
-        teamMembers.push(manager);
+        const intern = new Intern(answers.name, answers.id, answers.email, answers.school);
+        teamMembers.push(intern);
         promptMenu();
     })
 };
@@ -227,7 +227,7 @@ const promptIntern = () => {
 // generate html once 'Finish Building Team' is selected
 const buildTeam = () => {
     console.log (`Finished Building Your Team`)
-   fs.writeFileSync(path.join(__dirname,'/dist/team.html'), generateSite(teamMembers));
+   fs.writeFileSync(path.join(__dirname,'/dist/team.html'), generatePage(teamMembers));
 };
 promptMenu();
 
