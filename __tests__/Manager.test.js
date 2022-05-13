@@ -4,10 +4,8 @@ jest.mock('../lib/Employee');
 console.log(new Employee());
 
 test('creates a manager class', () => {
-    const manager = new Manager('Dave');
-
-    expect(manager.name).toBe('Dave');
-    expect(manager.id).toEqual(expect.any(Number));
+    const manager = new Manager(Employee.name, 10);
+   
     expect(manager.officeNumber).toEqual(expect.any(Number));
     expect(manager.role).toEqual('Manager');
 

@@ -4,7 +4,7 @@ jest.mock('../lib/Employee');
 console.log(new Employee());
 
 test('creates an intern class', () => {
-    const intern = new Intern('lqpv');
+    const intern = new Intern(Employee.name, 'lqpv');
 
     expect(intern.school).toEqual(expect.any(String));
 
@@ -13,7 +13,7 @@ test('creates an intern class', () => {
 });
 
 test("Get Intern's school", () => {
-    const intern = new Intern('escuela');
+    const intern = new Intern(Employee.name, 'escuela');
     expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school));
     
 });

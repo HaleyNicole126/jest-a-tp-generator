@@ -4,7 +4,7 @@ jest.mock('../lib/Employee');
 console.log(new Employee());
 
 test('creates an engineer class', () => {
-    const engineer = new Engineer('davehub');
+    const engineer = new Engineer('Dave', 'davehub');
 
     expect(engineer.github).toEqual(expect.any(String));
 
@@ -13,12 +13,12 @@ test('creates an engineer class', () => {
 });
 
 test("Get Engineer's GitHub username and role", () => {
-    const engineer = new Engineer('somehub');
+    const engineer = new Engineer('Someone', 'somehub');
     expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github));
     
 });
 
 test("gets Engineer's role", () => {
-    const engineer = new Engineer('Dave');
+    const engineer = new Engineer('Dave', 'davehub');
     expect(engineer.getRole()).toEqual('Engineer');
 });
