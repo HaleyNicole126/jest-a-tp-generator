@@ -1,24 +1,38 @@
 const Engineer = require('../lib/Engineer');
 const Employee = require('../lib/Employee');
-jest.mock('../lib/Employee');
-console.log(new Employee());
+
+
+const engineer = new Engineer('Dave', 3, 'dave@dave.com', 'davehub');
 
 test('creates an engineer class', () => {
-    const engineer = new Engineer('Dave', 'davehub');
-
-    expect(engineer.github).toEqual(expect.any(String));
-
-
-
+    
+    expect(engineer.name).toBe('Dave');
+    expect(engineer.id).toBe(3);
+    expect(engineer.email).toBe('dave@dave.com');
+    expect(engineer.github).toBe('davehub');
+ 
 });
 
-test("Get Engineer's GitHub username and role", () => {
-    const engineer = new Engineer('Someone', 'somehub');
+test("Get Engineer's name from getName() method", () => {
+    expect(engineer.getName()).toEqual('Dave');
+    
+});
+
+test("Get employee ID from getId() method", () => {
+    expect(engineer.getId()).toBe(3);
+});
+
+test("Get email from getEmail() method", () => {
+    expect(engineer.getEmail()).toBe('dave@dave.com');
+    
+});
+
+
+test("Get Engineer's GitHub username", () => {
     expect(engineer.getGithub()).toEqual(expect.stringContaining(engineer.github));
     
 });
 
 test("gets Engineer's role", () => {
-    const engineer = new Engineer('Dave', 'davehub');
-    expect(engineer.getRole()).toEqual('Engineer');
+   expect(engineer.getRole()).toEqual('Engineer');
 });

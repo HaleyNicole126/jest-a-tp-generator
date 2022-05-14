@@ -1,7 +1,8 @@
 const Employee = require('../lib/Employee');
+const employee = new Employee('Greg', 123, 'greg@aol.com');
 
 test('creates Employee class', () => {
-    const employee = new Employee('Greg', 123, 'greg@aol.com');
+    
   
     expect(employee.name).toBe('Greg');
     expect(employee.id).toEqual(expect.any(Number));
@@ -13,7 +14,7 @@ test('creates Employee class', () => {
     expect(employee.getName()).toBe('Greg');
   });
   test('test if we can get Id from getId() method', () => {
-      expect(employee.getId()).toBe('123');
+      expect(employee.getId()).toBe(123);
     });
     test('test if we can get Email from getEmail() method', () => {
       expect(employee.getEmail()).toBe('greg@aol.com');
