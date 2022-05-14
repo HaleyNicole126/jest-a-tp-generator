@@ -1,24 +1,46 @@
 const Intern = require('../lib/Intern');
 const Employee = require('../lib/Employee');
-jest.mock('../lib/Employee');
-console.log(new Employee());
+
+const intern = new Intern('sam', 4, 'sam@sam.com', 'universidad')
 
 test('creates an intern class', () => {
-    const intern = new Intern(Employee.name, 'lqpv');
+   
 
-    expect(intern.school).toEqual(expect.any(String));
-
-
+    expect(intern.name).toBe('sam');
+    expect(intern.id).toBe(4);
+    expect(intern.email).toBe('sam@sam.com');
+    expect(intern.school).toBe('universidad');
 
 });
 
+test("Get Intern's name from getName() method", () => {
+    expect(intern.getName()).toEqual('sam');
+    
+});
+
+
 test("Get Intern's school", () => {
-    const intern = new Intern(Employee.name, 'escuela');
-    expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school));
+
+    expect(intern.getSchool()).toEqual('universidad');
+    
+});
+
+test("Get employee ID from getId() method", () => {
+    expect(intern.getId()).toBe(4);
+});
+
+test("Get email from getEmail() method", () => {
+    expect(intern.getEmail()).toBe('sam@sam.com');
     
 });
 
 test("gets Intern's role", () => {
-    const intern = new Intern('Dave');
+  
     expect(intern.getRole()).toEqual('Intern');
 });
+
+
+
+
+
+
