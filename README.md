@@ -19,8 +19,8 @@
   This application is a command-line application that accepts user input to allow managers to generate a page that display's their team's basic information, including their names, ids, emails, roles, and additional information depending on their role. Manager information includes an office number, Engineer roles include a github username, and Intern roles include a school.
   
   ## Walkthrough
-  Here is a walkthrough video showing the testing suites passing, how the user invokes the application, how a user enters responses to prompts, and as well as a sample generated HTML file. 
-  Link to walkthrough video: https://youtu.be/wTy_sa8-5kA
+  - Here is a walkthrough video showing the testing suites passing, how the user invokes the application, how a user enters responses to prompts, and as well as a sample generated HTML file. 
+  - Link to walkthrough video: https://youtu.be/wTy_sa8-5kA
 
   ## Installation
   To install this project, you will need node.js and npm. Once you've cloned the repository to your local machine run `npm i` to install the Inquirer dependency. Then, run `node index.js` to invoke the application. 
