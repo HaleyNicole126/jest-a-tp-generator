@@ -41,14 +41,19 @@
 
   ## Screenshots
   - *Invoking the application and first prompt*
+  
   ![image](https://user-images.githubusercontent.com/94570754/168405059-614a438f-7190-42f1-a364-63a2b8fcc8f9.png)
   
+  
   - *Sample prompts*
+  
   ![image](https://user-images.githubusercontent.com/94570754/168405132-2ce7895c-1b12-461f-bc1d-1f23cca59081.png)
+  
 
   - *Sample HTML*
+  
   ![image](https://user-images.githubusercontent.com/94570754/168405212-0a6873ca-0f7f-4c42-8395-2e579a78a633.png)
-
+  
 
 
   ## Contributing
