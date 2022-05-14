@@ -61,6 +61,9 @@
 
   ## Tests
   To run the tests use `npm run test` which will run all of the testing suites. 
+  
+  ![image](https://user-images.githubusercontent.com/94570754/168405785-e5bad116-5da6-4247-99ca-5c7e81857b42.png)
+
 
   ## License 
 
